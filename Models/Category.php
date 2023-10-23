@@ -8,11 +8,12 @@ class Category
         $this->category = $category;
     }
 
-    public function getIconCat()
+
+    public function getCat()
     {
         if ($this->category === 'Cani' or $this->category === 'cani') {
             return 'Cani';
-        } else {
+        } elseif ($this->category === 'Gatti' or $this->category === 'gatti') {
             return 'Gatti';
         }
     }

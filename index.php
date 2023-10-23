@@ -42,6 +42,20 @@ require __DIR__  . '/db.php';
                             <div class="card-footer   text-center">
 
                                 <h2 class="text-info m-4"><?= $prodotto->product_price; ?> €</h2>
+                                <h2 class="text-info m-4">
+                                    <?= $prodotto->product_quantity; ?>
+                                    <?php if ($prodotto->product_quantity > 0) : ?>
+                                        <span>disponibili</span>
+                                    <?php endif; ?>
+                                </h2>
+
+
+
+                                <span>
+                                    <?= $prodotto->product_cat->getCat(); ?>
+
+                                </span>
+
 
                             </div>
                         </div>
